@@ -1,0 +1,24 @@
+{
+  "name": "server_for_game",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js",
+    "dev": "nodemon index.js"
+  },
+  "type": "module",
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.17.1",
+    "md5": "^2.0.0",
+    "mongoose": "^6.9.1",
+    "pg": "^8.9.0"
+  },
+  "devDependencies": {
+    "gh-pages": "^5.0.0",
+    "nodemon": "^2.0.20"
+  }
+}
