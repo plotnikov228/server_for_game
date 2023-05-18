@@ -18,10 +18,10 @@
                     <execution>
                         <id>npm install</id>
                         <goals>
-                            <goal>npm</goal>
+                            <goal>install</goal>
                         </goals>
                         <configuration>
-                            <arguments>install</arguments>
+                            <arguments>npm</arguments>
                         </configuration>
                     </execution>
                 </executions>
