@@ -186,7 +186,7 @@
 	</build>
 	<profiles>
 		<profile>
-			<id>Prepare Node JS environment</id>
+			<id>dev</id>
 			<activation>
 				<file>
 					<!-- Cannot use ${nodejs.directory} variable here as maven would not 
