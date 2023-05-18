@@ -2,7 +2,7 @@ version: '3.8'
 services:  
   api:    
     build: ./api    
-    container_name: api_backend    
+    container_name: server_for_game    
     ports:      
       - '80:80'    
     volumes:     
