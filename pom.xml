@@ -231,47 +231,6 @@
 								</configuration>
 							</execution>
 						</executions>
-					</plugin>
-					<plugin>
-						<groupId>org.codehaus.mojo</groupId>
-						<artifactId>exec-maven-plugin</artifactId>
-						<version>1.2.1</version>
-						<executions>
-							<execution>
-								<id>Install JAM</id>
-								<phase>initialize</phase>
-								<goals>
-									<goal>exec</goal>
-								</goals>
-								<configuration>
-									<workingDirectory>${nodejs.directory}</workingDirectory>
-									<executable>${nodejs.directory}/node</executable>
-									<arguments>
-										<argument>node_modules/npm/bin/npm-cli.js</argument>
-										<argument>install</argument>
-										<argument>jamjs</argument>
-									</arguments>
-								</configuration>
-							</execution>
-							<execution>
-								<id>Install LESS compiler</id>
-								<phase>initialize</phase>
-								<goals>
-									<goal>exec</goal>
-								</goals>
-								<configuration>
-									<workingDirectory>${nodejs.directory}</workingDirectory>
-									<executable>${nodejs.directory}/node</executable>
-									<arguments>
-										<argument>node_modules/npm/bin/npm-cli.js</argument>
-										<argument>install</argument>
-										<argument>less</argument>
-									</arguments>
-								</configuration>
-							</execution>
-						</executions>
-					</plugin>
-				</plugins>
 			</build>
 		</profile>
 	</profiles>
