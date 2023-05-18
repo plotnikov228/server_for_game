@@ -5,7 +5,7 @@ meta:
     version: 17
 
 build:
-  args: -Dserver.port=80 -Pindex
+  args: -Dserver.port=80 -Pdev
 
 run:
   jarName: bag-end.jar
