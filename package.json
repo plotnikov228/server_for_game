@@ -5,8 +5,12 @@
   "main": "index.js",
   "scripts": {
     "start": "node index.js",
+    "package": "npm pack",
     "dev": "nodemon index.js"
   },
+  
+  "predeploy": "rm -rf build && npm run build",
+  "deploy": "gh-pages -d build",
   "type": "module",
   "keywords": [],
   "author": "",
@@ -18,7 +22,6 @@
     "pg": "^8.9.0"
   },
   "devDependencies": {
-    "gh-pages": "^5.0.0",
     "nodemon": "^2.0.20"
   }
 }
