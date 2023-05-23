@@ -8,12 +8,12 @@ import User from "../models/user.js";
 class PlayerController {
     async initPlayer (req, res) {
         try {
-            const {user_id} = req.params
-            const user = await User.findOne({_id: user_id})
+            const {user_name} = req.params
+            const user = await User.findOne({name: user_name})
             if(user) {
-            let player = await Player.findOne({user_id: user_id})
+            let player = await Player.findOne({user_id: user._id})
             if (!player){
-               player = await Player.create({user_id: user_id, experience: 1, level: 1})     
+               player = await Player.create({user_id: user._id, experience: 1, level: 1})     
         }
         return res.json(player)
     } else {
@@ -45,10 +45,10 @@ class PlayerController {
 
     async playerDelete (req, res) {
         try {
-            const {user_id} = req.params;
-            const player = await Player.findOne({user_id: user_id});
+            const {user_name} = req.params;
+            const player = await Player.findOne({name: user_name});
             if(player){
-            await Player.findOneAndDelete({user_id: user_id});
+            await Player.findOneAndDelete({_id: player._id});
             res.json({ message: 'player was deleted', status: true });}
             else {
                 res.json({ message: 'player not found', status: false })
